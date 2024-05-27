@@ -4,6 +4,6 @@ title: Welcome to Ramzi's articles!
 
 | Articles | Description |
 | ----------- | ----------- |
-| [MVVM vs MVI](https://ramzijabali.github.io/articles/MVVM-vs-MVI) | A quick look at the differences between two most poopular architectures|
-| [Android Core Features](https://ramzijabali.github.io/articles/Summaries) | An extensive look at various android features |
+| [MVVM vs MVI](https://ramzijabali.github.io/articles/Architecture) | A quick look at the different software architectures |
+| [Android Core Features](https://ramzijabali.github.io/articles/Android | An extensive look at various android features |
 
