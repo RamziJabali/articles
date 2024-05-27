@@ -1,5 +1,3 @@
-# MVVM vs MVI
-
 ## What are they?
 
 * MVVM = Model View View Model , MVI = Model View Intent
