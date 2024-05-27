@@ -2,6 +2,22 @@
 
 ### Where to start?
 
+First you need to add the required dependencies!
+
+```
+val room_version = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
+    // Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$room_version")
+
+    // To use Kotlin Symbol Processing (KSP)
+    ksp("androidx.room:room-compiler:$room_version")
+
+```
+
 There are three components to creating a Room database
 
 1. Database class: holds the database and contains refrences of all DAO's
