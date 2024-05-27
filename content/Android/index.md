@@ -1,5 +1,5 @@
 ---
-title: Android Articles with Kotlin!
+title: Android
 ---
 
 | Articles | Description |
