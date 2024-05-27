@@ -21,8 +21,8 @@ val room_version = "2.6.1"
 There are three components to creating a Room database
 
 1. Database class: holds the database and contains refrences of all DAO's
-2. DAO(Data Access Object): Get's entites from the database and pushes changes back to the database
-3. Entites: Get/Set field values
+2. DAO(Data Access Object): Get's entities from the database and pushes changes back to the database
+3. Entities: Get/Set field values
 
 ### Now that we have the basic understanding down, let's get started:
 
