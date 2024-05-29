@@ -1,5 +1,5 @@
 ---
-title: Welcome to Ramzi's articles!
+title: Home 🏠
 ---
 
 | Articles | Description |
