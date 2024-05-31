@@ -1,5 +1,3 @@
-# First Application
-
 ## 07/04/21
 
 ### Introduction
