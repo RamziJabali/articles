@@ -43,9 +43,6 @@ I decided to use Room for database management due to its simplicity and required
 2. **Room Database and DAO:** I created a Room database and a DAO. The DAO creation took some time, but Google searches and articles helped me get through it.
 3. **Repository:** I created a repository for the database.
 
-![Database](https://raw.githubusercontent.com/RamziJabali/blog/main/screenshots/DataBase.png)
-
-
 #### Connecting the Pieces
 With the calendar widget sorted and the database in place, I connected all the components and added final touches.
 
