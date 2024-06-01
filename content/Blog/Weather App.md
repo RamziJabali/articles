@@ -2,10 +2,9 @@
 title: Weather
 date: 2021-07-09
 tags:
-  - personal
-  - evergreen
+  - android
 ---
-### Project Goal
+### Project Goalß
 In this project, my goal was to make API calls to a weather server and populate the UI with several weather attributes.
 
 ### Getting Started

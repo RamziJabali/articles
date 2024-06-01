@@ -1,5 +1,5 @@
 ---
-title: Jog Tracker App
+title: Jog Tracker
 date: 2022-01-20
 tags:
   - android
