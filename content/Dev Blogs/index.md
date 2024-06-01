@@ -1,5 +1,5 @@
 ---
-title: Devloper Blogs ✍️
+title: Developer Blogs ✍️
 ---
 
 | Categories | Description |
