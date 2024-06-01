@@ -1,4 +1,4 @@
 ---
-title: Developer Blogs ✍️
+title: Dev Blog
 tags:
 ---
