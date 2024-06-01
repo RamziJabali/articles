@@ -1,5 +1,5 @@
 ---
-title: 8 Counting Sort 1
+title: Counting Sort 1
 date: 2024-01-01T14:02:48-07:00
 tags:
 ---
