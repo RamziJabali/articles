@@ -3,6 +3,9 @@ title: User Info CSV
 date: 2024-05-31
 tags:
   - kotlin
+  - algorithm
+  - medium
+  - assessment
 ---
 In the Kotlin file, write a program to perform a GET request on the route https://coderbyte.com/api/challenges/logs/user-info-csv and then sort the CSV data by the second column.
 

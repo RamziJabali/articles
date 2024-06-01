@@ -3,6 +3,8 @@ title: "First Android App: Tic-Tac-Toe"
 date: 2021-07-21
 tags:
   - android
+  - journal
+  - thoughts
 ---
 ### Introduction
 In an attempt to learn Android development, I decided to create a simple tic-tac-toe game.

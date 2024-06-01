@@ -2,6 +2,9 @@
 title: Gregorian Date
 date: 2019-10-19
 tags:
+  - algorithm
+  - java
+  - medium
 ---
 ```java
 public class DateUtil {

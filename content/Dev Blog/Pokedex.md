@@ -3,6 +3,8 @@ title: Pokedex App
 date: 2021-08-17
 tags:
   - android
+  - journal
+  - thoughts
 ---
 This project was a combination of everything that I have learned thus far, with extra specs.
 

@@ -2,6 +2,8 @@
 title: Git Commands
 date: 2020-03-05
 tags:
+  - git
+  - article
 ---
 Essential Git commands to help with coding 
 Git = Is a version control unit system, keeps control over versions.

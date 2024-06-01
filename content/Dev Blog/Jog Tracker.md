@@ -3,6 +3,9 @@ title: Jog Tracker
 date: 2022-01-20
 tags:
   - android
+  - journal
+  - kotlin
+  - thoughts
 ---
 ### Introduction
 This blog documents my journey in creating a jog tracker Android application, combining various concepts and libraries I've learned.

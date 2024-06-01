@@ -3,6 +3,9 @@ title: Static Factory Method
 date: 2020-03-21
 tags:
   - java
+  - design-pattern
+  - factory
+  - article
 ---
 ### What is a Static Factory Method: Simply a static method that returns an instant of the class.
 

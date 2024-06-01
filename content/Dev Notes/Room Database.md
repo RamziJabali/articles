@@ -5,6 +5,7 @@ tags:
   - android
   - room
   - database
+  - article
 ---
 ## Creating Room Database
 

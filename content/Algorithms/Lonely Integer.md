@@ -2,6 +2,9 @@
 title: Lonely Integer
 date: 2024-01-01T14:02:48-07:00
 tags:
+  - kotlin
+  - easy
+  - algorithm
 ---
 Given an array of integers, where all elements but one occur twice, find the unique element.
 

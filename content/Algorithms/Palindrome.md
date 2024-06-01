@@ -2,6 +2,9 @@
 title: Palindrome
 date: 2024-01-01T14:02:48-07:00
 tags:
+  - kotlin
+  - algorithm
+  - medium
 ---
 ```kotlin
 

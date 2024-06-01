@@ -2,6 +2,9 @@
 title: Phone Number Pad
 date: 2024-01-01T14:02:48-07:00
 tags:
+  - kotlin
+  - algorithm
+  - medium
 ---
 / Given the phone dial pad attached below. Write a function that takes in a string of entered numbers
 // and returns all possible corresponding text possibly meaning to enter as a list of strings.

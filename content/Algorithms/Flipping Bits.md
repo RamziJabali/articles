@@ -2,6 +2,10 @@
 title: Flipping Bits
 date: 2024-01-01T14:02:48-07:00
 tags:
+  - kotlin
+  - algorithm
+  - easy
+  - incomplete
 ---
 You will be given a list of 32 bit unsigned integers. Flip all the bits (1 + 0 and 0 —+ 1) and return the result as
 an unsigned integer.

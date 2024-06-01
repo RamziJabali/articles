@@ -3,6 +3,9 @@ title: Foreground Service
 date: 2024-01-01
 tags:
   - foreground-service
+  - android
+  - kotlin
+  - article
 ---
 ## Foreground Service with persistent notification
 

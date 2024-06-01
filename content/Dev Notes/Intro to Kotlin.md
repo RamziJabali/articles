@@ -3,6 +3,7 @@ title: Intro to Kotlin
 date: 2021-03-01
 tags:
   - kotlin
+  - article
 ---
   
 <h2 align="center">Unit</h2>

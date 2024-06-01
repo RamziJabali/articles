@@ -2,6 +2,9 @@
 title: Merge Sort
 date: 2024-02-03
 tags:
+  - kotlin
+  - algorithm
+  - easy
 ---
 ```kotlin
 fun mergeSort(array: Array<Int>) {

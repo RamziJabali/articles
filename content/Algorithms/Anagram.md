@@ -2,6 +2,8 @@
 title: Anagram
 date: 2024-01-01T14:02:48-07:00
 tags:
+  - kotlin
+  - medium
 ---
 ```kotlin
 // 2 strings, anagram words you can rearrange that makes it into another word

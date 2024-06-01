@@ -2,6 +2,10 @@
 title: Intro to Android
 date: 2021-03-01
 tags:
+  - java
+  - android
+  - xml
+  - article
 ---
 <p align="center">
  

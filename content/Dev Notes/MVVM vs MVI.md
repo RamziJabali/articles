@@ -3,6 +3,7 @@ title: MVVM vs MVI
 date: 2024-01-01
 tags:
   - architecture
+  - article
 ---
 ## What are they?
 

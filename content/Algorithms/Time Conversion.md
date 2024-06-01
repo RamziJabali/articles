@@ -2,6 +2,9 @@
 title: Time Conversion
 date: 2024-01-01T14:02:48-07:00
 tags:
+  - kotlin
+  - algorithm
+  - easy
 ---
 Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.
 Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.

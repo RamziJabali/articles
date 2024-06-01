@@ -3,6 +3,9 @@ title: Singletons
 date: 2020-03-21
 tags:
   - java
+  - design-pattern
+  - article
+  - singleton
 ---
 ### Enforce The Singleton property with a private constructor or an enum type
 

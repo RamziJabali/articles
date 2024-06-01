@@ -3,6 +3,9 @@ title: Builder Factory Method
 date: 2020-03-21
 tags:
   - java
+  - design-pattern
+  - article
+  - factory
 ---
 ### Consider a builder when faced with many constructor parameters
 

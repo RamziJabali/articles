@@ -2,6 +2,9 @@
 title: Plus Minus
 date: 2024-01-01T14:02:48-07:00
 tags:
+  - kotlin
+  - algorithm
+  - easy
 ---
 Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the
 decimal value of each fraction on a new line with places after the decimal.

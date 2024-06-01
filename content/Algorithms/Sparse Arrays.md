@@ -2,6 +2,9 @@
 title: Sparse Arrays
 date: 2024-01-01T14:02:48-07:00
 tags:
+  - kotlin
+  - algorithm
+  - easy
 ---
 There is a collection of input strings and a collection of query strings. For each query string, determine how
 many times it occurs in the list of input strings. Return an array of the results.

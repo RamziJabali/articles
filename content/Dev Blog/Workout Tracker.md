@@ -3,6 +3,8 @@ title: Workout Tracker
 date: 2021-08-30
 tags:
   - android
+  - journal
+  - thoughts
 ---
 ### Technologies Used
 - Room Database

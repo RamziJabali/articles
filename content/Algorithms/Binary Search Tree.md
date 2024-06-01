@@ -3,6 +3,8 @@ title: Binary Search Tree
 date: 2024-02-02
 tags:
   - kotlin
+  - data-structure
+  - incomplete
 ---
 ```kotlin
 class BinarySearchTree(

@@ -2,6 +2,9 @@
 title: Counting Sort 1
 date: 2024-01-01T14:02:48-07:00
 tags:
+  - algorithm
+  - easy
+  - kotlin
 ---
 ![Screenshot 2024-05-16 at 4 43 48 PM](https://github.com/RamziJabali/algorithm-problems/assets/18749441/85d7328c-9d39-44e1-8cf0-744fd7a04f7a)
 ![Screenshot 2024-05-16 at 4 44 27 PM](https://github.com/RamziJabali/algorithm-problems/assets/18749441/d5f2bd81-7ce1-492e-a164-835814353462)![Screenshot 2024-05-16 at 4 43 48 PM](https://github.com/RamziJabali/algorithm-problems/assets/18749441/85d7328c-9d39-44e1-8cf0-744fd7a04f7a)

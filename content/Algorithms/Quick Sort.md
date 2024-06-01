@@ -2,6 +2,9 @@
 title: Quick Sort
 date: 2024-02-03
 tags:
+  - kotlin
+  - algorithm
+  - easy
 ---
 ```kotlin
 // we want to choose a pivot randomly
