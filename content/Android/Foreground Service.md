@@ -1,4 +1,4 @@
-## Foreground Service with persistant notification
+## Foreground Service with persistent notification
 
 ### how to start a foreground service
 

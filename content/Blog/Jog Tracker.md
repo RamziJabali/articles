@@ -1,5 +1,9 @@
-## 20/01/22
-
+---
+title: Jog Tracker App
+date: 2022-01-20
+tags:
+  - android
+---
 ### Introduction
 This blog documents my journey in creating a jog tracker Android application, combining various concepts and libraries I've learned.
 

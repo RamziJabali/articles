@@ -1,5 +1,10 @@
-## 07/09/21
-
+---
+title: Weather
+date: 2021-07-09
+tags:
+  - personal
+  - evergreen
+---
 ### Project Goal
 In this project, my goal was to make API calls to a weather server and populate the UI with several weather attributes.
 

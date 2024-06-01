@@ -1,5 +1,9 @@
-## 08/17/21
-
+---
+title: Pokedex App
+date: 2021-08-17
+tags:
+  - android
+---
 This project was a combination of everything that I have learned thus far, with extra specs.
 
 ### Technologies Used
