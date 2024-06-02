@@ -244,3 +244,33 @@ suspend fun coroutineWithThreadInfo(number: Int, delay: Long){
 }
 ```
 
+![Suspend](https://raw.githubusercontent.com/RamziJabali/articles/v4/images/suspend_example.png)
+
+![Blocking](https://raw.githubusercontent.com/RamziJabali/articles/v4/images/blocking_example.png)
+
+
+## Coroutine Scope
+- Controls the lifetime of the coroutine
+	- Ex: viewModelScope
+- Defines a scope for new coroutines. Every **coroutine builder** (like [launch](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/launch.html), [async](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html), etc.) is an extension on [CoroutineScope](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html) and inherits its [coroutineContext](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/coroutine-context.html) to automatically propagate all its elements and cancellation.
+## Coroutine Builders
+
+A coroutine builder, as the name implies, builds the coroutine which allows us to use it.
+
+List of coroutine builders
+1. Launch
+2. Async
+3. runBlocking
+
+### 1. Launch
+- Launches a new coroutine without blocking the current thread and returns a reference to the coroutine as a Job.
+- The coroutine context is inherited from the CoroutineScope.
+
+```kotlin
+CoroutineScope.launch(
+	context: CoroutineContext = EmptyCoroutineContext,
+	start: CoroutineStart = CoroutineStart.Default
+) {
+	// code
+}
+```
