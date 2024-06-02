@@ -201,3 +201,46 @@ Coroutines are efficient and lightweight threads!
 - `Thread.sleep` commands are blocking calls
 	- While they are sleeping they cannot do other tasks
 - `suspend` does not block the main thread so the main thread can work on other tasks while our functions are suspended
+## Blocking vs Suspending 
+
+Blocking Example:
+```kotlin
+fun main() {
+	print("main start")
+	threadRoutine(1, 500)
+	threadRoutine(2, 800)
+	thread.sleep(1000)
+	println("main end")
+}
+
+fun threadRoutine(number: Int, delay: Long){
+	thread {
+		println("routine $number start work")
+		Thread.sleep(delay)
+		println("routine $number finished work")
+	}
+}
+```
+
+Suspend Example:
+```kotlin
+fun main() = runBlocking {
+	print("main start")
+	joinAll(
+		async { coroutineWithThreadInfo(1, 500) },
+		async { coroutineWithThreadInfo(2, 300) },
+		async { /*other work! */ }
+	
+	threadRoutine(1, 500)
+	threadRoutine(2, 800)
+	thread.sleep(1000)
+	println("main end")
+}
+
+suspend fun coroutineWithThreadInfo(number: Int, delay: Long){
+	println("coroutine $number starts work on ${Thread.currentThread().name}")
+	delay(delay)
+	println("coroutine $number finished work on ${Thread.currentThread().name}"
+}
+```
+
