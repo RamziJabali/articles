@@ -29,19 +29,19 @@ Before diving into coding, I started by designing the application's look and flo
 
 - The first look:
 
-![Original Imagination](https://raw.githubusercontent.com/RamziJabali/blog/main/screenshots/original_imagination.png)
+![Original Imagination](https://raw.githubusercontent.com/RamziJabali/articles/v4/images/first_look.png)
 
 
 #### Redesigned Statistics Page
 I streamlined the statistics page to display only essential information, improving user experience and interface clarity.
 
-![First Look](https://raw.githubusercontent.com/RamziJabali/blog/main/screenshots/first%20look.png)
+![First Look](https://raw.githubusercontent.com/RamziJabali/articles/v4/images/JJ1_final_stats.png)
 
 
 ### Calendar Integration
 The calendar was designated its own page for users to view their runs and routes, with minor formatting adjustments for enhanced readability.
 
-![Calendar Look](https://raw.githubusercontent.com/RamziJabali/blog/main/screenshots/calendar_look.png)
+![Calendar Look](https://raw.githubusercontent.com/RamziJabali/articles/v4/images/JJ1_final_calendar.png)
 
 
 ### Project Development

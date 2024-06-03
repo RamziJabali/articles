@@ -263,7 +263,8 @@ List of coroutine builders
 3. runBlocking
 
 ### 1. Launch
-- Launches a new coroutine without blocking the current thread and returns a reference to the coroutine as a Job.
+- Launches a new coroutine without blocking the current thread and returns a reference to the coroutine as a Job object.
+- Does not give you access to the result outside of the coroutine.
 - The coroutine context is inherited from the CoroutineScope.
 
 ```kotlin
@@ -274,3 +275,25 @@ CoroutineScope.launch(
 	// code
 }
 ```
+
+### Job
+- Is a background job, that is cancellable and contains a life-cycle.
+- Is returned from the **Launch** coroutine builder.
+
+### 2. Async
+- Creates a coroutine and returns its future result as a Deferred object.
+- The coroutine context is inherited from the CoroutineScope.
+
+```kotlin
+CoroutineScope.async(
+	context: CoroutineContext = EmptyCoroutineContext,
+	start: CoroutineStart = CoroutineStart.Default
+) {
+	// code
+}
+```
+
+### Deferred
+- Is a type of **Job** that contains a result.
+- Is returned from the **Async** coroutine builder.
+
