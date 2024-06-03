@@ -57,7 +57,7 @@ After extensive design work, I transitioned to coding, dividing the project into
 ### Database Design
 To efficiently manage jog entries, I designed the database with a one-to-many relationship, summarizing multiple jog entries into a single record for streamlined querying.
 
-![Database](https://raw.githubusercontent.com/RamziJabali/blog/main/screenshots/DataBase.png)
+![Database](https://raw.githubusercontent.com/RamziJabali/articles/v4/images/entity_relationship.png)
 
 ### Conclusion
 Through meticulous design and development, the jog tracker application blends functionality and simplicity, providing users with essential statistics and a user-friendly interface for tracking their runs.
