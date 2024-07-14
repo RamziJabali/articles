@@ -23,7 +23,7 @@ AIDL allows for IPC(InterProcess Communication). Allowing for code to be accessi
 	1. You should be able to see a variety of different options, you will choose to AIDL.
 	2. If it is not clickable
 		1. Go to `build.gradle` on the module level and add `aidl = true`
-			```
+			```gradle
 			buildFeatures {  
 		    compose = true  aidl = true  
 		    }
@@ -46,7 +46,7 @@ Steps:
 
 ## 1. Implement AIDL Interface within a service class
 ### AIDL file
-```Java
+```java
 // IMyAidlInterface.aidl  
 package ramzi.eljabali.aidlmockapp;  
   
@@ -65,7 +65,7 @@ interface IMyAidlInterface {
 ```
 
 ### Service implementing AIDL
-```Kotlin
+```kotlin
 package ramzi.eljabali.aidlmockapp  
   
 import android.app.Service  
@@ -150,7 +150,7 @@ class MyAidlService : Service() {
 	    </intent-filter>```
 
 Service Side AndroidManifest.xml
-```XML AndroidManifest.xml
+```xml
 <permission  
     android:name="ramzi.eljabali.aidlmockapp.permission.BIND_MY_AIDL_SERVICE"  
     android:protectionLevel="signature" />
@@ -192,7 +192,7 @@ In Android Studio you would want to hover to your `app` package and right click 
 	- As previously discussed `<uses-permission>` tag is required to specify the system permission we need to grant for our application to work.
 	- `android:name` is the name of the permission we are wanting to grant.
 
-```XML 
+```xml
 <uses-permission android:name="ramzi.eljabali.aidlmockapp.permission.BIND_MY_AIDL_SERVICE" />
 ```
 
@@ -231,7 +231,7 @@ private var iMyAidlInterface: IMyAidlInterface? = null
 		- We then want to set the package name to the package name of the service.
 		- `intent.setPackage("ramzi.eljabali.aidlmockapp")`
 
-```Kotlin
+```kotlin
 val intent = Intent("ramzi.eljabali.aidlmockapp.MyAidlService")  
 intent.setPackage("ramzi.eljabali.aidlmockapp")
 ```
@@ -242,7 +242,7 @@ intent.setPackage("ramzi.eljabali.aidlmockapp")
 		- `bindService(intent, mConnection, BIND_AUTO_CREATE)`
 			- `BIND_AUTO_CREATE` is an `Int` flag that specifies that it will automatically create the service as long as the binding exists.
 
-```Kotlin
+```kotlin
 startService(intent)  
   
 val isBinding = bindService(intent, mConnection, BIND_AUTO_CREATE) 
