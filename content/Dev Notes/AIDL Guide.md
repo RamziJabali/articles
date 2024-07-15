@@ -337,3 +337,5 @@ class MainActivity : ComponentActivity() {
 8. Client side started the service using `startService(intent)`
 9. Client side was then bound to the service using `bindService(intent, mConnection, BIND_AUTO_CREATE)`
 
+# GitHub Code
+[aidl-client-service-demo-android](https://github.com/RamziJabali/aidl-client-service-demo-android)
