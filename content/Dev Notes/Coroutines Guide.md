@@ -321,7 +321,9 @@ CoroutineScope.async(
 	- Ex: `viewModelScope`
 - A coroutine context is an indexed set of element instances
 - Context elements are `[dispatcher, job, error handler, coroutine name]`
-[coroutine scope]()
+ 
+![coroutine scope](https://raw.githubusercontent.com/RamziJabali/articles/v4/images/Coroutine_Scope.png)
+
 - Coroutine scope has a coroutine context as its site property
 - Coroutine context is a map of context elements
 - Dispatchers, Jobs, Error Handler, and Name
@@ -554,7 +556,7 @@ In Kotlin, coroutines are always launched within a scope, which defines the life
 	4. Cancelling a parent will cancel all children recursively. But cancelling a child will not cancel the parent or siblings.
 	5. If a child coroutine fails, the exception is propagated upwards and depending on the `Job` type either all siblings are cancelled or not.
 
-[structured concurrency]()
+![structured concurrency](https://raw.githubusercontent.com/RamziJabali/articles/v4/images/structured_concurrency_5.png)
 
 ### Example of structure concurrency:
 ```kotlin
