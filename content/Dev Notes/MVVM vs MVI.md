@@ -4,12 +4,14 @@ date: 2024-01-01
 tags:
   - architecture
   - article
+  - mvvm
+  - mvi
 ---
 ## What are they?
 
 * MVVM = Model View View Model , MVI = Model View Intent
 *  They are both presentational patterns
-    * Meant to separte your presentation layer into different parts
+    * Meant to separate your presentation layer into different parts
 
 ## What is the model?
 
@@ -33,8 +35,8 @@ tags:
 ## ViewModel vs Intent?
 
 * MVVM has ViewModel as a part of it's abbreviation and MVI has Intent
-   * Though on Android they will both most likey both be done with a viewmodel.
-* The job of the viewmodel is to contain state mapping logic
+   * Though on Android they will both most likely both be done with a `viewmodel`.
+* The job of the `viewmodel` is to contain state mapping logic
    * It processes incoming UI actions like a button click or refresh swipe and then decides based on the action how the state looks like afterwards. Like showing loading indicator which really dumbs down the view.
 
 * The model, the view, and the viewmodel(in most cases) is the same between both patterns.
@@ -77,7 +79,7 @@ fun MvvmScreen(
 ### Example MVI
 
 ```kotlin
-class MvvmViewModel(
+class MviViewModel(
    private val savedStateHandle: SavedStateHandle): ViewModel() {
    var state by mutableStateOf(MviState())
       private set
@@ -126,7 +128,7 @@ fun MviScreen(
 
 ### Summary
 
-The diffrence is state encapsulation and the way the state is packaged and delivered to the view.
+The difference is state encapsulation and the way the state is packaged and delivered to the view.
 
 ### What would I be choosing and why?
 
