@@ -1,6 +1,8 @@
 ---
-title: "{{release_name}} - {{date}}"  # Replace with the tech release name and date
-tags: [tech, release-notes, {{category}}]  # Add tags for organization
+title: "{{title}} - {{date}}"
+tags:
+  - tech
+  - release-notes
 ---
 
 # {{release_name}}
