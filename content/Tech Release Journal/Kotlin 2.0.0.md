@@ -6,7 +6,13 @@ tags:
   - journal
   - kotlin
   - release-notes
-  - k-2-compiler
+  - k2-compiler
+  - compose-compiler
+  - bench-marks
+  - smart-cast
+  - power-assert
+  - context-sensitive-resolution
+  - guarded-conditions
 ---
 
 # Kotlin 2.0.0
@@ -139,5 +145,4 @@ when(searchPanel = SelectedSearchPanel) {
 - [Smart Cast Improvements](https://kotlinlang.org/docs/whatsnew20.html#smart-cast-improvements)
 - [Kotlin Features Survey #2](https://blog.jetbrains.com/kotlin/2021/06/kotlin-features-survey-edition-2/)
 - [Improve resolution using expected type #379](https://github.com/Kotlin/KEEP/issues/379)
-- 
 
