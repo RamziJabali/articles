@@ -97,12 +97,22 @@ According to Android documentation we should be modularizing our applications by
 	2. Motivational Quotes
 		1. Repository
 		2. UseCase
-	1. Computations
+	3. Computations
 		1. UseCase
-	2. Displaying User Information
+	4. Displaying User Information
 		1. UI
+		2. ViewModel
 - Now that we have a high level understanding of our application which layer would these pieces go into?
 
+| UI Layer                                                                                                         | Domain Layer                    | Data Layer                                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Compose views to show user jog information.                                                                      | Location UseCase<br>            | Location Foreground Service:<br>The service might communicate with a repository to store or update location data and with the domain layer for further processing. |
+| UserJogViewModel will interact with the domain layer to grab all required information to present in the UI Layer | Motivational Quotes UseCase     | Location Repository                                                                                                                                                |
+|                                                                                                                  | User Jog Information data model | User Jog DataBase                                                                                                                                                  |
+|                                                                                                                  | Computations                    | User Jog DAO                                                                                                                                                       |
+|                                                                                                                  |                                 | User Jog Entity                                                                                                                                                    |
+|                                                                                                                  |                                 | Motivational Quotes Repository                                                                                                                                     |
+|                                                                                                                  |                                 | Retrofit API Interface                                                                                                                                             |
 
 ## Conclusion
 <!-- Summarize the article, restating the key ideas. You can also end with a call to action or closing thoughts. -->
