@@ -1,0 +1,2 @@
+The Kotlin Multiplatform technology is designed to simplify the development of cross-platform projects. It reduces time spent writing and maintaining the same code for [different platforms](https://kotlinlang.org/docs/multiplatform.html#kotlin-multiplatform-use-cases) while retaining the flexibility and benefits of native programming.
+[documentation](https://kotlinlang.org/docs/multiplatform.html)
