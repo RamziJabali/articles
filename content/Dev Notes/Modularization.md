@@ -85,7 +85,23 @@ According to Android documentation we should be modularizing our applications by
 	- Abstracts how and where data is fetched or stored, but provides the data to the domain layer through `repositories`.
 
 ## Modularization Example
-Let's say we want to build an application that has 
+- Let's say we want to build a motivational jogging application, what all would go into that?
+- Very high level
+	1. Location Grabbing And Storing
+		1. Database
+		2. DAO
+		3. Entities
+		4. Repository
+		5. UseCase
+		6. Data Models
+	2. Motivational Quotes
+		1. Repository
+		2. UseCase
+	1. Computations
+		1. UseCase
+	2. Displaying User Information
+		1. UI
+- Now that we have a high level understanding of our application which layer would these pieces go into?
 
 
 ## Conclusion
