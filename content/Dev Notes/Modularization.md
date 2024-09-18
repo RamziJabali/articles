@@ -65,7 +65,27 @@ This then allows these modules easier maintainability and scalability, which in 
 ## How To Modularize Your Application
 According to Android documentation we should be modularizing our applications by **features** and **layers**.
 ![[Pasted image 20240917210519.png]]
+1. **UI Layer**
+	- Contains the UI elements like `composables`
+	- Contains state holders such as `viewModels`
+	- The role of the UI layer is to display the application data on screen.
+	- Whenever the data changes it's job is to reflect that change in the UI.
+	- Whenever user interactions happen, such as button clicks or screen swipes, it's job is to react to those events and reflect those changes.
+2. **Domain Layer**
+	- Contains business logic and rules that are reused in our application.
+		- Like a `usecase` or an `entity`
+			- Use cases perform actions, and entities are the core data models.
+	- It's supposed framework free, meaning it should be free from any Android specific code.
+		- `Activity`
+		- `Context`
+		- `ViewModel`
+3. **Data Layer**
+	- Focuses on **managing and accessing data** from external sources like databases, APIs, and other storage systems.
+	- Handles the **implementation of data retrieval, storage, and caching**.
+	- Abstracts how and where data is fetched or stored, but provides the data to the domain layer through `repositories`.
 
+## Modularization Example
+Let's say we want to build an application that has 
 
 
 ## Conclusion
