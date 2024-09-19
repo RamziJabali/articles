@@ -64,7 +64,7 @@ This then allows these modules easier maintainability and scalability, which in 
 | Testability   | A testable code is one where components can be easily tested in isolation.                                                                                                                                                                                                                                                                                   |
 ## How To Modularize Your Application
 According to Android documentation we should be modularizing our applications by **features** and **layers**.
-![[android_layers_modularization.png]]
+![image](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/android_layers_modularization.png)
 1. **UI Layer**
 	- Contains the UI elements like `composables`
 	- Contains state holders such as `viewModels`
