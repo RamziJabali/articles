@@ -104,6 +104,7 @@ According to Android documentation we should be modularizing our applications by
 		2. ViewModel
 - Now that we have a high level understanding of our application which layer would these pieces go into?
 
+
 | UI Layer                                                                                                         | Domain Layer                    | Data Layer                                                                                                                                                         |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Compose views to show user jog information.                                                                      | Location UseCase<br>            | Location Foreground Service:<br>The service might communicate with a repository to store or update location data and with the domain layer for further processing. |
