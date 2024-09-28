@@ -157,11 +157,12 @@ com.example.joggingapp
 
 ```
 
-## Conclusion
-<!-- Summarize the article, restating the key ideas. You can also end with a call to action or closing thoughts. -->
+## Conclusion & Thoughts
+- Modularization is one of those concepts that is hard when you are in the middle of a project. But very easy to implement when starting a project.
+- Modularization when done correctly is extremely rewarding, as now you have ease of scalability.
+- Modularization is also a very easy concept to understand and implement.
 
 ## References
-<!-- If you have used any sources, list them here for further reading or citation purposes. -->
 - [Android Guide To Architecture](https://developer.android.com/topic/architecture)
 - [UI Layer](https://developer.android.com/topic/architecture/ui-layer)
 - [Domain Layer](https://developer.android.com/topic/architecture/domain-layer)
