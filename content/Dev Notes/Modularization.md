@@ -86,6 +86,8 @@ According to Android documentation we should be modularizing our applications by
 
 ## Modularization Example
 - Let's say we want to build a motivational jogging application, what all would go into that?
+
+### Application Tech
 - Very high level
 	1. Location Grabbing And Storing
 		1. Database
@@ -104,6 +106,7 @@ According to Android documentation we should be modularizing our applications by
 		2. ViewModel
 - Now that we have a high level understanding of our application which layer would these pieces go into?
 
+### Application Tech Broken Down Into Layers
 
 | UI Layer                                                                                                         | Domain Layer                    | Data Layer                                                                                                                                                         |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -114,6 +117,45 @@ According to Android documentation we should be modularizing our applications by
 |                                                                                                                  |                                 | User Jog Entity                                                                                                                                                    |
 |                                                                                                                  |                                 | Motivational Quotes Repository                                                                                                                                     |
 |                                                                                                                  |                                 | Retrofit API Interface                                                                                                                                             |
+### Potential Application Package Structure
+
+```wasm
+com.example.joggingapp
+│
+├── ui
+│   ├── jog
+│   │   ├── JogScreen.kt
+│   │   └── JogDetails.kt
+│   ├── motivation
+│   │   ├── MotivationScreen.kt
+│   ├── viewmodel
+│       └── UserJogViewModel.kt
+│
+├── domain
+│   ├── model
+│   │   ├── UserJogInformation.kt
+│   │   └── MotivationalQuotes.kt
+│   ├── usecase
+│   │   ├── LocationUseCase.kt
+│   │   └── MotivationalQuotesUseCase.kt
+│   └── computation
+│       └── PaceCalculator.kt
+│
+├── data
+│   ├── repository
+│   │   ├── LocationRepository.kt
+│   │   └── MotivationalQuotesRepository.kt
+│   ├── local
+│   │   ├── UserJogDatabase.kt
+│   │   ├── UserJogDAO.kt
+│   │   └── UserJogEntity.kt
+│   ├── remote
+│   │   └── MotivationalQuotesApiInterface.kt
+│   └── service
+│       └── LocationForegroundService.kt
+│
+
+```
 
 ## Conclusion
 <!-- Summarize the article, restating the key ideas. You can also end with a call to action or closing thoughts. -->
