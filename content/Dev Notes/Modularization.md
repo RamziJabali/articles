@@ -162,6 +162,8 @@ com.example.joggingapp
 
 ## References
 <!-- If you have used any sources, list them here for further reading or citation purposes. -->
-- [Source 1](link)
-- [Source 2](link)
+- [Android Guide To Architecture](https://developer.android.com/topic/architecture)
+- [UI Layer](https://developer.android.com/topic/architecture/ui-layer)
+- [Domain Layer](https://developer.android.com/topic/architecture/domain-layer)
+- [Data Layer](https://developer.android.com/topic/architecture/data-layer)
 
