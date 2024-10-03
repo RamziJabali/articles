@@ -32,7 +32,7 @@ Completion date expected::02-15-2025
 Completed:: To be seen
 Type:: #mobile-development, #software-engineering
 Tags:: [[kotlin]], [[swift]], [[kotlin multiplatform]],[[compose multiplatform]], [[MVI]],[[Dependency Injection]], 
-Platform:: #android, #iOS, #swift, #kotlin 
+Platform:: #android, #iOS, #swift, #kotlin
 
 ___
 ## 🎯 Objective
@@ -84,7 +84,6 @@ ___
 - [Kotlin Multiplatform Plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform)
 - [Compose Multiplatform](https://www.jetbrains.com/compose-multiplatform/)
 - [Create An App With Shared Logic and UI](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-multiplatform-create-first-app.html#examine-the-project-structure)
-- []()
 ## 📂 Project Logs 
 ### 10/02/2024
 - Work done
