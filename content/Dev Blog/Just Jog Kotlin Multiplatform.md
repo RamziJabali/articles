@@ -68,15 +68,17 @@ ___
 	5. Coroutines knowledge
 ## ✅ Tasks 
 - 10/02/2024
-[x] Setup Github repository for new project
-[x] Setup environment
-[x] Create KMM project and push it to new repository
-[ ] Make Github project
+- [x] Setup Github repository for new project
+- [x] Setup environment
+- [x] Create KMM project and push it to new repository
+- [ ] Make Github project
+
 - 10/03/2024
-[ ] Make Github project
-[ ] Test to see if base project works
-[ ] Understand `Shared` vs `AndroidMain` vs `iOSMain`
-[ ] Continue Writing Article
+- [ ] Make Github project
+	- [ ] Start tasking out project
+- [ ] Test to see if base project works
+- [ ] Understand `Shared` vs `AndroidMain` vs `iOSMain`
+- [ ] Continue Writing Article
 
 ## 📦 Resources 
 - [Create your first cross-platform app](https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-create-first-app.html#examine-the-project-structure)
@@ -87,7 +89,7 @@ ___
 ## 📂 Project Logs 
 ### 10/02/2024
 - Work done
-	- [[10/02/2024 - work]]
+	- [[10-02-2024-work]]
 - Thoughts
 	- [[10/02/2024 - thoughts]]
 
