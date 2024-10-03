@@ -25,14 +25,14 @@ ___
 - I am wanting to use Kotlin Multiplatform for the logic and Compose Multiplatform for the view creation.
 ---
 ## 📢 Project information
-Created::  02-02-2024 18:00
-Deadline:: 04-02-2025 18:00
-Hibernating:: 
-Completion date expected::02-15-2025 
-Completed:: To be seen
-Type:: #mobile-development, #software-engineering
-Tags:: [[kotlin]], [[swift]], [[kotlin multiplatform]],[[compose multiplatform]], [[MVI]],[[Dependency Injection]], 
-Platform:: #android, #iOS, #swift, #kotlin
+- Created::  02-02-2024 18:00
+- Deadline:: 04-02-2025 18:00
+- Hibernating:: 
+- Completion date expected::02-15-2025 
+- Completed:: To be seen
+- Type:: #mobile-development, #software-engineering
+- Tags:: [[kotlin]], [[swift]], [[kotlin multiplatform]],[[compose multiplatform]], [[MVI]],[[Dependency Injection]], 
+- Platform:: #android, #iOS, #swift, #kotlin
 
 ___
 ## 🎯 Objective
