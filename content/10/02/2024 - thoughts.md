@@ -1,5 +1,0 @@
-I remember doing this back in May of 2021, when it had 0 support. I had to clone a KampKit KMM project and change everything in it. From the project name, the package name, gradle properties, etc. Having to debug for a month straight to get the project to build and run on both platforms. 
-
-Now it's not as scary and support for KMM is is extremely wide spread. I had issues with my Android Studio and ended up having to install a stable version in order to be able to make a new project. 
-
-I am excited to finally be able to start this journey, and I am excited to see where it takes me. I am hoping to be able to commit 1-2 hours everyday and more on the weekends, but we will see with life is going. All in all good hustle today.
