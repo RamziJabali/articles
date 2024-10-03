@@ -1,0 +1,1 @@
+This is a means of passing dependency without having to manually pass it in. It is instead "injected" which means it's been prepared before hand as opposed to manually tracked and handled.
