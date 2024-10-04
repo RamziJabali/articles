@@ -89,8 +89,12 @@ ___
 ## 📂 Project Logs 
 ### 10/02/2024
 - Work done
-	- [[10-02-2024-work]]
+	- [[10-02-2024 - work]]
 - Thoughts
-	- [[10/02/2024 - thoughts]]
+	- [[10-02-2024 - thoughts]]
 
 ### 10/03/2024
+- Work done
+	- [[10-03-2024 - work]]
+- Thoughts
+	- [[10-03-2024 - thoughts]]
