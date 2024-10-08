@@ -76,9 +76,12 @@ ___
 - 10/03/2024
 - [ ] Make Github project
 	- [ ] Start tasking out project
-- [ ] Test to see if base project works
+- [x] Test to see if base project works
 - [ ] Understand `Shared` vs `AndroidMain` vs `iOSMain`
 - [ ] Continue Writing Article
+- 10/04/2024
+- [x] s
+- [ ] 
 
 ## 📦 Resources 
 - [Create your first cross-platform app](https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-create-first-app.html#examine-the-project-structure)
