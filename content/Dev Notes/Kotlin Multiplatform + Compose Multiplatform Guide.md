@@ -51,9 +51,11 @@ Hello, I am writing this as I am working on a KMM project of my own. This will s
 - I am doing it through Android Studio, doing it through the wizard is pretty straightforward.
 1. Click Kotlin Multiplatform App
 
-![[Kotlin Multiplatform App.png]]
+![Kotlin Multiplatform App.png](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/Kotlin%20Multiplatform%20App.png)
 2. I included test and selected `Regular Framework` for the iOS framework distribution as dealing with cocoa pods and Ruby has come with a plethora of difficulties when dealing with it in the past.
-![[Added Tests + Regular Framework.png]]
+![Regular Framework](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/Build%20Configuration%20Language.png)
+
+![Added Tests + Regular Framework.png](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/Added%20Tests%20%2B%20Regular%20Framework.png)
 3. Click Finish
 Now you have created a KMM project.
 
@@ -258,8 +260,15 @@ var body: some View {
 ```
 
 ### Results
-![Android]()
-![iOS]()
+
+#### Android
+
+![Android](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/Android_CMM_Shared.png)
+
+#### iOS
+
+![iOS](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/iOS_CMM_ScreenShot.png)
+
 
 ## Conclusion
 
