@@ -195,6 +195,72 @@ pluginManagement {
 ---
 - Now that all the set up has been done we can head to `shared` -> `commonMain` and create our shared Compose code!
 
+## Adding Compose View to Both Android and iOS with CMM
+- I went and created a shared view in `shared` -> `commonMain`
+```kotlin
+@Composable  
+fun GreetingView(name: String) {  
+    var counterMutableState by remember { mutableStateOf(0) }  
+    Column(  
+        modifier = Modifier.fillMaxSize(),  
+        horizontalAlignment = Alignment.CenterHorizontally,  
+        verticalArrangement = Arrangement.Center  
+    ) {  
+        Text(text = "Hello $name!")  
+        Button(onClick = { counterMutableState++ }) {  
+            Text("+ 1")  
+        }  
+        TextButton(onClick = { counterMutableState++ }) {  
+            Text("Counter: $counterMutableState")  
+        }  
+  
+        Button(onClick = { counterMutableState = 0 }) {  
+            Text("Reset Counter")  
+        }  
+    }}
+```
+
+- From here I went to `androidApp`-> `MainActivity` and referenced it in my UI.
+- To use it on iOS I went to `shared` -> `iosMain` and created a `kotlin` file and added the following
+```kotlin
+fun MainViewController() = ComposeUIViewController {  
+    GreetingView(Greeting().greet())  
+}
+```
+
+- You then go to `iosApp` -> `iosApp.xcodeproj` right click and click `open in` -> `Xcode`
+	- It will open the project for you in the Xcode IDE
+	- Build and Run the code as is to sync it with our code
+- Create a `.swift` file under `iosApp` and call it `ComposeView`
+```swift
+import Foundation
+import SwiftUI
+import shared
+
+struct ComposeView: UIViewControllerRepresentable {
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
+
+    func makeUIViewController(context: Context) -> 
+    some UIViewController {
+        AppKt.MainViewController()
+    }
+}
+```
+
+- Go to `ContentView` and update it
+```swift
+struct ContentView: View {
+
+var body: some View {
+        ComposeView()
+    }
+}
+```
+
+### Results
+![Android]()
+![iOS]()
+
 ## Conclusion
 
 
