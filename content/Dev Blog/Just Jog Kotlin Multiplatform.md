@@ -77,11 +77,17 @@ ___
 - [ ] Make Github project
 	- [ ] Start tasking out project
 - [x] Test to see if base project works
-- [ ] Understand `Shared` vs `AndroidMain` vs `iOSMain`
-- [ ] Continue Writing Article
-- 10/04/2024
-- [x] s
-- [ ] 
+- [x] Understand `Shared` vs `AndroidMain` vs `iOSMain`
+- [x] Continue Writing Article
+- 10/07/2024
+- [x] Add CMM to KMM project
+	- [x] Make Branch to add changes
+- [x] Add Dummy UI in Compose and use it on
+	- [x] Android
+	- [x] iOS
+- [x] Update Guide
+- [ ] Make GitHub Project
+
 
 ## 📦 Resources 
 - [Create your first cross-platform app](https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-create-first-app.html#examine-the-project-structure)
