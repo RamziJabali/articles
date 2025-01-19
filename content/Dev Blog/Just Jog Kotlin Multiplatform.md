@@ -59,35 +59,13 @@ ___
 	1. Time
 3. 👶 Naivety
 	1. iOS
-	2. Compose Multiplm
+	2. Compose Multiplatform
 4. 👨‍💻 Insights
 	1. Have strong Android knowledge
 	2. Prior KMM experience
 	3. Have a lot of saved resources
 	4. Compose knowledge
 	5. Coroutines knowledge
-## ✅ Tasks 
-- 10/02/2024
-- [x] Setup Github repository for new project
-- [x] Setup environment
-- [x] Create KMM project and push it to new repository
-- [ ] Make Github project
-
-- 10/03/2024
-- [ ] Make Github project
-	- [ ] Start tasking out project
-- [x] Test to see if base project works
-- [x] Understand `Shared` vs `AndroidMain` vs `iOSMain`
-- [x] Continue Writing Article
-- 10/07/2024
-- [x] Add CMM to KMM project
-	- [x] Make Branch to add changes
-- [x] Add Dummy UI in Compose and use it on
-	- [x] Android
-	- [x] iOS
-- [x] Update Guide
-- [ ] Make GitHub Project
-
 
 ## 📦 Resources 
 - [Create your first cross-platform app](https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-create-first-app.html#examine-the-project-structure)
@@ -107,3 +85,21 @@ ___
 	- [[10-03-2024 - work]]
 - Thoughts
 	- [[10-03-2024 - thoughts]]
+
+### 01/14/2025
+- Work done
+	- [[01-14-2025 - work]]
+- Thoughts
+	- [[01-14-2025 - thoughts]]
+
+### 10/18/2024
+- Work done
+	- [[01-18-2025 - work]]
+- Thoughts
+	- [[01-18-2025 - thoughts]]
+
+### 10/19/2024
+- Work done
+	- [[01-19-2025 - work]]
+- Thoughts
+	- [[01-19-2025 - thoughts]]
