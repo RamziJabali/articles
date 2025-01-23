@@ -27,11 +27,11 @@ Hello, I am writing this as I am working on a KMM project of my own. This will s
 	- What is the difference between `shared`, `iosMain`, and `androidMain`
 - **What is CMM**
 - **How to Setup CMM With Our KMM Project**
-## Section 1: What is KMM
+## **Section 1: What is KMM***
 - KMM is Kotlin Multiplatform Mobile.
 - It's meant to be a solution for cross platform development between Android and iOS. Serves as a means to share code between both platforms.
 - In the case of the mobile scene even serve as a means to share UI code.
-## Section 2: Creating a KMM Project 
+## **Section 2: Creating a KMM Project**
 ### Setup your environment
 - Before creating your KMM project you want to make sure that you have your environment set up KMM development.
 1. Ensure you have [Android Studio](https://developer.android.com/studio) installed 
@@ -59,7 +59,7 @@ Hello, I am writing this as I am working on a KMM project of my own. This will s
 3. Click Finish
 Now you have created a KMM project.
 
-## Section 3: Package Structure
+## **Section 3: Package Structure**
 KMM package structure is going to as follows
 ```bash
 JustJogKMM
@@ -87,7 +87,59 @@ JustJogKMM
 
 ### What is the difference between `androidApp`, `iosApp`, and `shared`
 
+- This is where platform dependent code lives. For example in `androidApp` you will find `Activities` which is an Android specific component.
+- You will find `manifest.xml` in `androidApp` and `info.plist` in iosApp.
 ### What is the difference between `androidMain`, `shared`, and `iosMain`
+
+- These are **source sets** inside the `shared` module. They organize platform-specific and platform-independent code within the shared module.
+
+#### **`androidMain`**
+
+- Contains Android-specific code in the `shared` module.
+- Used for writing platform-specific implementations for Android (e.g., Android APIs, platform-dependent libraries like Room, WorkManager, etc.).
+- Typically located in `src/androidMain`.
+	- Example:
+	    - `actual fun getPlatformName(): String = "Android"`
+    
+
+#### **`iosMain`**
+
+- Contains iOS-specific code in the `shared` module.
+- Used for writing platform-specific implementations for iOS (e.g., iOS APIs, platform-dependent libraries like CoreData, UIKit, etc.).
+- Typically located in `src/iosMain`.
+	- Example:
+	    - `actual fun getPlatformName(): String = "iOS"`
+    
+
+#### **`commonMain`**
+
+- Contains common, platform-independent code in the `shared` module.
+- Typically located in `src/commonMain`.
+- Used for writing reusable code that works across all platforms.
+- Example:
+    `expect fun getPlatformName(): String`
+    
+
+---
+
+### **Key Differences Between Source Sets**
+
+| **Source Set**    | **Purpose**                                                                    | **Examples**                                     |
+| ----------------- | ------------------------------------------------------------------------------ | ------------------------------------------------ |
+| **`commonMain`**  | Contains shared, platform-independent code (business logic, networking, etc.). | API calls, data models, shared logic.            |
+| **`androidMain`** | Contains Android-specific code (platform APIs, dependencies).                  | Accessing Android SDK features like WorkManager. |
+| **`iosMain`**     | Contains iOS-specific code (platform APIs, dependencies).                      | Accessing iOS APIs like UIKit or CoreData.       |
+
+---
+
+### **Summary of Relationship**
+
+1. **`androidApp`** and **`iosApp`** are platform-specific **application modules** that build the actual apps for Android and iOS, respectively.
+2. **`shared`** is the **common module** that holds reusable code written in Kotlin Multiplatform.
+3. Inside the `shared` module:
+    - **`commonMain`**: Platform-independent (shared) code.
+    - **`androidMain`**: Android-specific implementations.
+    - **`iosMain`**: iOS-specific implementations.
 
 ## What is CMM
 CMM or Compose Multiplatform mobile is a declarative framework for sharing UIs across multiple platforms. Based on Kotlin Multiplatform and Jetpack Compose.
@@ -269,6 +321,26 @@ var body: some View {
 
 ![iOS](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/iOS_CMM_ScreenShot.png)
 
+
+## **Section 4:  Adding and Accessing Resources  In Common Main**
+
+### Setup
+1. We want to create a package/directory called `composeResources` within `commonMain`
+2. We want to define different resources we want to be able to use cross platform.
+	- Example:
+		- ![Compose ](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/KMM-article-compose-resources.png)
+3. Once we have populated `composeResources` with our shared resources we will `build` to generate a `Res` object that we then use in `commonMain` to reference those components.
+
+Example:
+
+```kotlin
+enum class JustJogBottomNavigationItems(val itemName: String, val icon: DrawableResource, val index: Int) {  
+    STATISTICS_BOTTOM_NAV_ITEM("Statistics", Res.drawable.home, 0),  
+    CALENDAR_BOTTOM_NAV_ITEM("Calendar", Res.drawable.calendar, 1)  
+}
+```
+
+**Warning: Once you do this, your compose previews in Android will break. Though there are work arounds, like running the preview to be able to preview your composable.**
 
 ## Conclusion
 

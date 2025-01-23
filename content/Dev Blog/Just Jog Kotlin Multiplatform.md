@@ -73,6 +73,8 @@ ___
 - [Kotlin Multiplatform Plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform)
 - [Compose Multiplatform](https://www.jetbrains.com/compose-multiplatform/)
 - [Create An App With Shared Logic and UI](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-multiplatform-create-first-app.html#examine-the-project-structure)
+- [Launching UI On Different Platforms](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-multiplatform-explore-composables.html#launching-ui-on-different-platforms)
+- [Compose Resources](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-multiplatform-resources-usage.html#interaction-with-other-libraries-and-resources)
 ## 📂 Project Logs 
 ### 10/02/2024
 - Work done
@@ -92,14 +94,21 @@ ___
 - Thoughts
 	- [[01-14-2025 - thoughts]]
 
-### 10/18/2024
+### 10/18/2025
 - Work done
 	- [[01-18-2025 - work]]
 - Thoughts
 	- [[01-18-2025 - thoughts]]
 
-### 10/19/2024
+### 10/19/2025
 - Work done
 	- [[01-19-2025 - work]]
 - Thoughts
 	- [[01-19-2025 - thoughts]]
+
+### 10/22/2025
+- Work done
+	- [[01-22-2025 - work]]
+- Thoughts
+	- [[01-22-2025 - thoughts]]
+
