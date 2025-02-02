@@ -94,21 +94,38 @@ ___
 - Thoughts
 	- [[01-14-2025 - thoughts]]
 
-### 10/18/2025
+### 01/18/2025
 - Work done
 	- [[01-18-2025 - work]]
 - Thoughts
 	- [[01-18-2025 - thoughts]]
 
-### 10/19/2025
+### 01/19/2025
 - Work done
 	- [[01-19-2025 - work]]
 - Thoughts
 	- [[01-19-2025 - thoughts]]
 
-### 10/22/2025
+### 01/22/2025
 - Work done
 	- [[01-22-2025 - work]]
 - Thoughts
 	- [[01-22-2025 - thoughts]]
 
+### 01/25/2025
+- Work done
+	- [[01-25-2025 - work]]
+- Thoughts
+	- [[01-25-2025 - thoughts]]
+
+### 01/26/2025
+- Work done
+	- [[01-26-2025 - work]]
+- Thoughts
+	- [[01-26-2025 - thoughts]]
+
+### 02/01/2025
+- Work done
+	- [[02-01-2025 - work]]
+- Thoughts
+	- [[02-01-2025 - thoughts]]
