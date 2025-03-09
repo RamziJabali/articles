@@ -16,7 +16,6 @@ tags:
   - dependency-injection
   - project
 ---
-
 # 🚀 Project: Just Jog KMM
 ___
 
@@ -75,6 +74,9 @@ ___
 - [Create An App With Shared Logic and UI](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-multiplatform-create-first-app.html#examine-the-project-structure)
 - [Launching UI On Different Platforms](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-multiplatform-explore-composables.html#launching-ui-on-different-platforms)
 - [Compose Resources](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-multiplatform-resources-usage.html#interaction-with-other-libraries-and-resources)
+- [Kotlin Release Compatibility](https://kotlinlang.org/docs/releases.html#kotlin-release-compatibility)
+- [KTOR for multiplatform](https://ktor.io/docs/client-create-multiplatform-application.html#-xgbukh_164)
+- [Content Negotiation Dependencency KTOR](https://ktor.io/docs/client-serialization.html)
 ## 📂 Project Logs 
 ### 10/02/2024
 - Work done
@@ -129,3 +131,17 @@ ___
 	- [[02-01-2025 - work]]
 - Thoughts
 	- [[02-01-2025 - thoughts]]
+
+### 02/04/2025
+- Work done
+	- [[02-04-2025 - work]]
+- Thoughts
+	- [[02-04-2025 - thoughts]]
+
+### 02/08/2025
+- Work done
+	- [[02-08-2025 - work]]
+- Thoughts
+	- [[02-08-2025 - thoughts]]
+
+

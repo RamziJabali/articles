@@ -9,6 +9,7 @@ tags:
   - swift
   - compose
   - incomplete
+  - ktor
 ---
 
 # Kotlin Multiplatform Guide
@@ -27,6 +28,9 @@ Hello, I am writing this as I am working on a KMM project of my own. This will s
 	- What is the difference between `shared`, `iosMain`, and `androidMain`
 - **What is CMM**
 - **How to Setup CMM With Our KMM Project**
+- **Network Calls**
+	- API calls using KTOR
+	- `kotlinx.serialization` for processing network requests and responses
 ## **Section 1: What is KMM***
 - KMM is Kotlin Multiplatform Mobile.
 - It's meant to be a solution for cross platform development between Android and iOS. Serves as a means to share code between both platforms.
@@ -341,6 +345,35 @@ enum class JustJogBottomNavigationItems(val itemName: String, val icon: Drawable
 ```
 
 **Warning: Once you do this, your compose previews in Android will break. Though there are work arounds, like running the preview to be able to preview your composable.**
+
+## **Section 5:  Adding Dependencies**
+There is always a form of confusion when adding dependencies to your project. Is this library multiplatform compatible? Where do I put this if it's tailored for Android vs iOS or the other way around.
+
+Easiest way to know is compatibility checks on whether or not this library is going to work with your source set.
+
+For example KTOR has multiple dependencies for KMM that need to be implemented in it's different source sets. 
+```kotlin
+implementation(libs.ktor.client.core)
+implementation(libs.ktor.client.darwin)
+implementation(libs.ktor.client.okhttp)
+```
+One of those goes into the `commonMain`, `iosMain`, and `androidMain` source set.
+
+`build.gradle.kts(:shared)`
+```kotlin
+sourceSets {  
+    iosMain.dependencies {  
+        implementation(libs.ktor.client.darwin)  
+    }
+      androidMain.dependencies {
+        implementation(libs.ktor.client.okhttp)
+    }
+    commonMain.dependencies {
+        implementation(libs.ktor.client.core)
+    }
+}
+```
+You are essentially assigning the flavor of the dependency into the source set it belongs to within your `shared` package. This will allow our native applications to be able to use different implementations of the same library.
 
 ## Conclusion
 
