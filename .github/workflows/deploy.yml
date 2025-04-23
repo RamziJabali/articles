@@ -1,19 +1,19 @@
 name: Deploy Quartz site to GitHub Pages
- 
+
 on:
   push:
     branches:
       - v4
- 
+
 permissions:
   contents: read
   pages: write
   id-token: write
- 
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
- 
+
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -21,18 +21,32 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Fetch all history for git info
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18.14
+
       - name: Install Dependencies
         run: npm ci
+
       - name: Build Quartz
         run: npx quartz build
+
+      - name: Create dummy file (to help prefetch artifact action)
+        run: echo "dummy" > dummy.txt
+
+      - name: Prefetch upload-artifact (GitHub caching workaround)
+        uses: actions/upload-artifact@v3
+        with:
+          name: dummy
+          path: dummy.txt
+          if-no-files-found: ignore
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v1.0.8
         with:
           path: public
- 
+
   deploy:
     needs: build
     environment:
