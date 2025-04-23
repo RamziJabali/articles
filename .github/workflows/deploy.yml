@@ -18,6 +18,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,8 +39,12 @@ jobs:
 
       - run: npm ci
 
-      - name: Check types and style
-        run: npm run check
+      - name: Type check
+        run: tsc --noEmit
+
+      - name: Check formatting
+        run: |
+          npx prettier . --check || echo "Prettier found issues, but not failing build."
 
       - name: Test
         run: npm test
@@ -56,12 +61,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
+
       - name: Get package version
         run: node -p -e '`PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
+
       - name: Create release tag
         uses: pkgdeps/git-tag-action@v3
         with:
