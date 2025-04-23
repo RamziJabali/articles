@@ -32,17 +32,13 @@ jobs:
       - name: Build Quartz
         run: npx quartz build
 
-      - name: Create dummy file (to help prefetch artifact action)
-        run: echo "dummy" > dummy.txt
-
-      - name: Prefetch upload-artifact (GitHub caching workaround)
+      - name: Upload artifact (force pre-fetch of upload-artifact@v3)
         uses: actions/upload-artifact@v3
         with:
-          name: dummy
-          path: dummy.txt
-          if-no-files-found: ignore
+          name: public-site
+          path: public
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1.0.8
         with:
           path: public
