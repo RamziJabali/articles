@@ -89,6 +89,33 @@ fi
 	Any non-zero exit code from a Git hook will stop the commit
 
 If it failed, we print a message to let you know why the commit isn’t going through.
+
+---
+
+1. Another way of doing it is via `build.gradle` 
+2. You want to add the plugin:
+	1. `ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }`
+	2. `alias(libs.plugins.ktlint)` to plugins in `build.gradle`
+3. Then you can customize your `ktlint`
+```kotlin
+ktlint {  
+    android.set(true)  
+    verbose.set(true)  
+    ignoreFailures.set(true)  
+    filter {  
+        include("src/**/*.kt")  
+        exclude {  
+            it.file.path.contains("build/generated")  
+        }  
+        exclude {  
+            it.file.path.contains("commonResClass")  
+        }  
+        exclude {  
+            it.file.path.contains("commonMainResourceAccessors")  
+        }  
+    }}
+```
+
 ## Section 3: Testing
 
 - Make a commit and check out the results!
@@ -96,4 +123,50 @@ If it failed, we print a message to let you know why the commit isn’t going th
 ## Conclusion
 
 Automating workflow is a lot easier than you would think and should be added as a part of your project to make code production faster and easier.
+
+name: Deploy Quartz site to GitHub Pages
+ 
+on:
+  push:
+    branches:
+      - v4
+ 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+ 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+ 
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for git info
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.14
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build Quartz
+        run: npx quartz build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: public
+ 
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
 
