@@ -11,7 +11,6 @@ tags:
   - incomplete
   - ktor
 ---
-
 # Kotlin Multiplatform Guide
 
 ## Introduction
@@ -28,9 +27,10 @@ Hello, I am writing this as I am working on a KMM project of my own. This will s
 	- What is the difference between `shared`, `iosMain`, and `androidMain`
 - **What is CMM**
 - **How to Setup CMM With Our KMM Project**
-- **Network Calls**
+- **Adding Dependencies - Ktor Focused**
 	- API calls using KTOR
 	- `kotlinx.serialization` for processing network requests and responses
+- **Storing And Accessing API Keys**
 ## **Section 1: What is KMM***
 - KMM is Kotlin Multiplatform Mobile.
 - It's meant to be a solution for cross platform development between Android and iOS. Serves as a means to share code between both platforms.
@@ -346,10 +346,10 @@ enum class JustJogBottomNavigationItems(val itemName: String, val icon: Drawable
 
 **Warning: Once you do this, your compose previews in Android will break. Though there are work arounds, like running the preview to be able to preview your composable.**
 
-## **Section 5:  Adding Dependencies**
+## **Section 5:  Adding Dependencies - Ktor Focused**
 There is always a form of confusion when adding dependencies to your project. Is this library multiplatform compatible? Where do I put this if it's tailored for Android vs iOS or the other way around.
 
-Easiest way to know is compatibility checks on whether or not this library is going to work with your source set.
+Easiest way to know whether a dependency is good, is by doing compatibility checks on whether or not this library is going to work with your source set.
 
 For example KTOR has multiple dependencies for KMM that need to be implemented in it's different source sets. 
 ```kotlin
@@ -375,6 +375,60 @@ sourceSets {
 ```
 You are essentially assigning the flavor of the dependency into the source set it belongs to within your `shared` package. This will allow our native applications to be able to use different implementations of the same library.
 
+View my article on [Ktor in KMM](https://ramzijabali.github.io/articles/Dev-Notes/Ktor-In-KMM) for a more in depth guide.
+
+## **Section 6:  Storing And Accessing API Keys**
+
+Once I had my Ktor Http clients set up properly I wanted to look into how I could store and access my API keys appropriately. 
+
+I found a for KMM library called [BuildKonfig](https://github.com/yshrsmz/BuildKonfig) which allows us to make and use `BuildConfig`. Which is exactly what I needed!
+
+So I added my API key to my `local.properties` file:
+
+```
+QUOTES_API_KEY=<yours here>
+```
+### version catalogue
+
+```toml
+[versions]
+buildKonfig = "0.17.1"
+
+[plugins]
+buildKonfig = { id = "com.codingfeline.buildkonfig", version.ref = "buildKonfig" }
+```
+
+### Shared build.gradle.kts
+
+```kotlin
+plugins {   
+    alias(libs.plugins.buildKonfig)  
+}
+
+buildkonfig {  
+    packageName = "ramzi.eljabali.justjogkmm.shared"  
+  
+    defaultConfigs {  
+        val apiKey: String =  
+            gradleLocalProperties(rootDir, providers).getProperty("QUOTES_API_KEY")  
+  
+        require(apiKey.isNotEmpty()) { }  
+  
+        buildConfigField(STRING, "QUOTES_API_KEY", apiKey)  
+    }  
+}
+```
+
+I kept it as bear bones as possible, as I didn't anything further from it.
+
+From there I `sync` and `build` my project and checked my `shared/build` folder and there it was `buildkonfig` build folder.
+
+![Build Konfig File Tree View]()
+
+As simple as that, I am able to reference `BuildKonfig` to get my API keys like I would in a normal Android project.
+
+![Build Konfig Internal Object]()
+
 ## Conclusion
 
 
@@ -386,3 +440,4 @@ You are essentially assigning the flavor of the dependency into the source set i
 - [Create An App With Shared Logic and UI](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-multiplatform-create-first-app.html#examine-the-project-structure)
 - [Compose Multiplatform GitHub](https://github.com/JetBrains/compose-multiplatform)
 - [Kotlin GitHub](https://github.com/JetBrains/kotlin)
+- [BuildKonfig](https://github.com/yshrsmz/BuildKonfig)

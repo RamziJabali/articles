@@ -9,7 +9,6 @@ tags:
   - kotlin-multiplatform
   - kotlin-serialization
   - api
-  - incomplete
 ---
 
 # Ktor In KMM
@@ -100,12 +99,43 @@ fun createHttpClient(client: HttpClientEngine): HttpClient {
 ```
 ## Section 3: Making API call
 
+```kotlin
+private val httpClient: HttpClient
+override suspend fun getRandomQuotes(): Result<Quote, NetworkError> {  
+    val response = try {  
+        httpClient.get(urlString = BASE_URL) {  
+            headers {  
+                append(  
+                    "X-Api-Key",  
+                    value = ""  
+                )  
+            }  
+        }    } catch (e: UnresolvedAddressException) {  
+        return Result.Error(NetworkError.NO_INTERNET)  
+    } catch (e: SerializationException) {  
+        return Result.Error(NetworkError.SERIALIZATION)  
+    }  
+  
+    return when (response.status.value) {  
+        in 200..299 -> {  
+            val quote = Result.Success(response.body<Quote>())  
+            Result.Success(quote.data)  
+        }  
+  
+        401 -> Result.Error(NetworkError.UNAUTHORIZED)  
+        408 -> Result.Error(NetworkError.REQUEST_TIMEOUT)  
+        409 -> Result.Error(NetworkError.CONFLICT)  
+        413 -> Result.Error(NetworkError.PAYLOAD_TOO_LARGE)  
+        in 500..599 -> Result.Error(NetworkError.SERVER_ERROR)  
+        else -> Result.Error(NetworkError.UNKNOWN)  
+    }  
+}
+```
 
 ## Conclusion
-<!-- Summarize the article, restating the key ideas. You can also end with a call to action or closing thoughts. -->
+- We're now able to make API calls on many different platforms, and this allows us to create code that is reusable on many different platforms.
 
 ## References
-<!-- If you have used any sources, list them here for further reading or citation purposes. -->
 - [Content Negotiation and Serialization](https://ktor.io/docs/client-serialization.html#serialization_dependency)
-- [# Creating a cross-platform mobile application](https://ktor.io/docs/client-create-multiplatform-application.html#ktor-dependencies)
+- [Creating a cross-platform mobile application](https://ktor.io/docs/client-create-multiplatform-application.html#ktor-dependencies)
 
