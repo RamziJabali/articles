@@ -423,11 +423,11 @@ I kept it as bear bones as possible, as I didn't anything further from it.
 
 From there I `sync` and `build` my project and checked my `shared/build` folder and there it was `buildkonfig` build folder.
 
-![Build Konfig File Tree View]()
+![Build Konfig File Tree View](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/build_konfig_file_view.png)
 
 As simple as that, I am able to reference `BuildKonfig` to get my API keys like I would in a normal Android project.
 
-![Build Konfig Internal Object]()
+![Build Konfig Internal Object](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/build_konfig_internal_object.png)
 
 ## Conclusion
 
