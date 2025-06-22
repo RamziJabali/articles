@@ -7,8 +7,8 @@ tags:
   - spring-boot
   - kotlin
   - api
+  - incomplete
 ---
-
 # Intro To Spring Boot
 
 ## Introduction
@@ -16,11 +16,9 @@ tags:
 I want to create an endpoint to get random quotes or quotes depending on specific tags. With my limited knowledge I know of Spring Boot. So let's get into how we create a spring boot project and then how we create an API.
 
 ## Key Points
-<!-- List the main points of the article. You can create bullet points or brief descriptions here. -->
-
 - **Point 1:** Create Spring Boot Project 
-- **Point 2:** Create Quotes Data Base
-- **Point 3:**
+- **Point 2:** Create Quotes Database
+- **Point 3:** Testing End Point
 
 ## Section 1: Create Spring Boot Project 
 
@@ -48,7 +46,7 @@ Using [Spring Initializer](https://start.spring.io) we can pick:
 ![Spring Boot Initializer Configuration](Add)
 
 Now that we have the configuration we click `generate` and we have our spring boot project.
-## Section 2: Creating the quotes data base
+## Section 2: Creating the quotes database
 
 Now that we have the project generated, we want to create the `PostgreSQL` database
 
@@ -197,9 +195,13 @@ class QuotesController(private val quoteService: QuoteService) {
 Using `Post Man` I am able to test our end point.
 
 - `{{base_url}}/quotes/tag/{{tagName}}`
-![]()
+
+![post_man_200_request_for_get_quotes_by_tag](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/post_man_get_request.png)
 
 - `{{base_url}}/quotes`
-![]()
+
+![post_man_200_request_for_posting_quote](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/post_man_post_request.png)
 
 ## Conclusion
+
+Using `Spring Boot` and `PostgreSQL` I was able to pretty easily able to make an endpoint to be able to post quotes and tags to our database.
