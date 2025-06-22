@@ -10,7 +10,6 @@ tags:
   - kotlin-serialization
   - api
 ---
-
 # Ktor In KMM
 
 ## Introduction
