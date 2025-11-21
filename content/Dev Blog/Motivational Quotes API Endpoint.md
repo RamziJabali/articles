@@ -29,7 +29,19 @@ Now, nothing more to it than to do it. How do I do it ...
 
 Thankfully tech has come a long way and I can simply ChatGPT "Spring Boot step by step guide to setup." TLDR go to [Spring Boot Initializer](Spring Boot step by step guide to setup.). 
 
-So step 1 select all the options I want for my project and generate. Boom, we have something from nothing!
+-  *I decided to make a Spring Boot guide while learning it.*
+	- [Intro To Spring Boot](https://ramzijabali.github.io/articles/Dev-Notes/Intro-To-Spring-Boot#intro-to-spring-boot)
+
+Getting it all setup took 1-2 hours tops. I was able to get familiarized with the different layers we will be dealing with.
+1. Controller
+2. Service
+3. Repository
+
+Here is where I started to think about what it is that I wanted from this.
+1. This was solely done for my KMM/CMP Jogging app.
+	1. So what did I need to make in this project a success and be able to go back to my initial project
+
+
 
 ### Section 3: {{Subheading 3}} (Optional)
 <!-- Include an additional point or a related topic if necessary. -->

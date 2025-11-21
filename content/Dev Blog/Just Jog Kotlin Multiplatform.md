@@ -25,7 +25,7 @@ ___
 ---
 ## 📢 Project information
 - Created::  02-02-2024 18:00
-- Deadline:: 04-02-2025 18:00
+- Deadline:: 04-02-2026 18:00
 - Hibernating:: 
 - Completion date expected::02-15-2025 
 - Completed:: To be seen

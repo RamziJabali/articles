@@ -19,6 +19,8 @@ I want to create an endpoint to get random quotes or quotes depending on specifi
 - **Point 1:** Create Spring Boot Project 
 - **Point 2:** Create Quotes Database
 - **Point 3:** Testing End Point
+- **Point 4:** Unit Testing Code
+- **Point 5:** Adding Data
 
 ## Section 1: Create Spring Boot Project 
 
@@ -201,6 +203,100 @@ Using `Post Man` I am able to test our end point.
 - `{{base_url}}/quotes`
 
 ![post_man_200_request_for_posting_quote](https://raw.githubusercontent.com/RamziJabali/articles/refs/heads/v4/images/post_man_post_request.png)
+
+
+## 4. Unit Testing Code
+
+| Annotation        | Purpose                             | Usage Example               |
+| ----------------- | ----------------------------------- | --------------------------- |
+| `@SpringBootTest` | Full app context (integration test) | Service test with real repo |
+| `@MockBean`       | Replace bean with mock              | Mock repo in service test   |
+| `@WebMvcTest`     | Test controller layer only          | Controller unit tests       |
+| `@Autowired`      | Inject beans                        | Inject service in test      |
+| `@Test`           | Mark method as test                 | Any test method             |
+
+### Service Testing
+
+```kotlin
+@Autowired  
+lateinit var quoteService: QuoteService  
+  
+@MockitoBean  
+lateinit var quoteRepository: QuoteRepository
+
+
+@Test  
+fun `getQuotesByTag returns a quote with that tag`() {  
+    val strongTag = Tag(id = 1L, name = "strong")  
+    val braveTag = Tag(id = 2L, name = "brave")  
+    val motivationalTag = Tag(id = 2L, name = "motivational")  
+  
+    val expectedQuotes = listOf(  
+        Quote(id = 2L, text = "Be brave!", author = "Someone", tags = setOf(braveTag)),  
+        Quote(  
+            id = 2L,  
+            text = "Be really brave and inspiring!",  
+            author = "Someone",  
+            tags = setOf(braveTag, motivationalTag)  
+        )  
+    )  
+    // Mock the repository to return test data  
+    given(quoteRepository.count()).willReturn(4L)  
+    given(quoteRepository.findByTags_Name(braveTag.name))  
+        .willReturn(expectedQuotes)  
+  
+    // Call the service  
+    val result = quoteService.getQuotesByTag(braveTag.name)  
+  
+    assertEquals(expectedQuotes.size, result.size)  
+    assertEquals(expectedQuotes.map { it.toQuoteResponse() }, result)  
+}
+```
+
+### Controller Testing
+
+```kotlin
+  
+@Autowired  
+lateinit var mockMvc: MockMvc  
+  
+@MockitoBean  
+lateinit var quoteService: QuoteService  
+  
+private val objectMapper = jacksonObjectMapper()
+
+  
+@Test  
+fun `POST addQuote returns created quote`() {  
+    val quoteRequest = QuoteRequest(  
+        text = "Be fearless",  
+        author = "John Doe",  
+        tags = listOf("motivational", "brave")  
+    )  
+  
+    val quoteResponse = QuoteResponse(  
+        id = 1L,  
+        text = "Be fearless",  
+        author = "John Doe",  
+        tags = listOf("motivational", "brave")  
+    )  
+  
+    // Mock the service call  
+    given(quoteService.createQuote(quoteRequest)).willReturn(quoteResponse)  
+  
+    mockMvc.perform(  
+        post("/quotes")  
+            .contentType(MediaType.APPLICATION_JSON)  
+            .content(objectMapper.writeValueAsString(quoteRequest))  
+    )  
+        .andExpect(status().isOk)  
+        .andExpect(jsonPath("$.id").value(1L))  
+        .andExpect(jsonPath("$.text").value("Be fearless"))  
+        .andExpect(jsonPath("$.author").value("John Doe"))  
+        .andExpect(jsonPath("$.tags", Matchers.hasSize<Any>(2)))  
+        .andExpect(jsonPath("$.tags", Matchers.containsInAnyOrder("motivational", "brave")))  
+}
+```
 
 ## Conclusion
 
