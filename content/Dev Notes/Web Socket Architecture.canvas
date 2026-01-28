@@ -1,8 +1,0 @@
-{
-	"nodes":[
-		{"id":"969e7945fd15c01c","type":"file","file":"work/RetryPolicy.canvas","x":-840,"y":-560,"width":400,"height":400},
-		{"id":"e8cd30175519e712","type":"file","file":"work/WebSocketConnectionStatus.canvas","x":-300,"y":-560,"width":400,"height":400},
-		{"id":"9c6ff50c118f293b","type":"file","file":"work/WebSocketClient.canvas","x":-560,"y":-100,"width":400,"height":400}
-	],
-	"edges":[]
-}
