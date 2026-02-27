@@ -1,6 +1,6 @@
 ---
 title: Kotlin Multiplatform Module Structure
-author: "{{author}}"
+author: Ramzi Eljabali
 date: 2026-01-31
 tags:
   - article
@@ -21,7 +21,7 @@ A quick Compose/Kotlin multiplatform multi module architecture approach to make 
 - **Multi Module Graph**
 ## Section 1: Kotlin Modules vs Kotlin Multiplatform Modules
 - A normal Kotlin module (JVM/Android) targets one runtime one main source set
-	- JVM(`kotlin(""jvm)`) - src/main/kotlin
+	- JVM(`kotlin("jvm")`) - src/main/kotlin
 	- Android(`kotlin("android")`) - src/main/kotlin
 	- All the code is compiled for one platform.
 
