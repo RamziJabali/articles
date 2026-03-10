@@ -65,7 +65,9 @@ class BuildKonfigConventionPlugin : Plugin<Project> {
                     )  
                     buildConfigField(FieldSpec.Type.STRING, "API_KEY", apiKey as String)  
                 }  
-            }        }    }  
+            }        
+        }    
+    }  
 }
 ```
 
