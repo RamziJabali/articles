@@ -55,6 +55,7 @@ class BuildKonfigConventionPlugin : Plugin<Project> {
                 apply(libsFindPlugin("buildKonfig"))  
             }  
             extensions.configure<BuildKonfigExtension> {  
+		        packageName = pathToPackageName() 
                 defaultConfigs {  
                     val apiKey = gradleLocalProperties(  
                         rootDir,  
