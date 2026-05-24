@@ -374,15 +374,13 @@ val LocalExtendedColors = staticCompositionLocalOf {
 }
 ```
 
-A clean way to expose these colors is through an app-level theme object:
+A clean way to expose these colors is through an `ColorScheme` extension:
 
 ```kotlin
-object AppTheme {
-    val colors: ExtendedColors
-        @Composable
-        @ReadOnlyComposable
-        get() = LocalExtendedColors.current
-}
+val ColorScheme.extended: ExtendedColors  
+    @ReadOnlyComposable  
+    @Composable    
+    get() = LocalExtendedColors.current
 ```
 
 Usage:
@@ -390,7 +388,7 @@ Usage:
 ```kotlin
 Text(
     text = "Success",
-    color = AppTheme.colors.success,
+    color = MaterialTheme.colorScheme.extended.error
 )
 ```
 
