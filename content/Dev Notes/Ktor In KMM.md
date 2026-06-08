@@ -10,8 +10,6 @@ tags:
   - kotlin-serialization
   - api
 ---
-# Ktor In KMM
-
 ## Introduction
 While working on my personal Kotlin multiplatform project, I was looking for a multiplatform http client to help with putting my project together. I came across Ktor a http client built with Kotlin and coroutines that works on multiplatform projects.
 
@@ -88,9 +86,10 @@ fun createHttpClient(client: HttpClientEngine): HttpClient {
                     prettyPrint = true  
                     isLenient = true  
                     // if API returns JSON fields we don't have  
-                    // defined it will ignore it and will not crash our app                    ignoreUnknownKeys = true  
+                    // defined it will ignore it and will not crash our app             
+                    ignoreUnknownKeys = true  
                 },  
-                contentType =  
+                contentType = ContentType.Application.Json
             )  
         }  
     }
