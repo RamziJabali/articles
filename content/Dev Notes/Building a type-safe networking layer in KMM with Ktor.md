@@ -416,3 +416,52 @@ class HttpClientFactory(private val justMessageLogger: JustMessageLogger) {
     }  
 }
 ```
+
+
+We can also have it handle our authentication and authorization for us. By having it load a cached token, to refreshing a token when a 401 is received.
+
+
+```kotlin
+        install(Auth){
+            bearer {
+                loadTokens {
+                    sessionStorage.observeAuthInfo().firstOrNull()?.let {
+                        BearerTokens(
+                            accessToken = it.accessToken,
+                            refreshToken = it.refreshToken
+                        )
+                    }
+                }
+                refreshTokens {
+                    if (response.request.url.encodedPath.contains("auth/")){
+                        return@refreshTokens null
+                    }
+
+                    val authInfo = sessionStorage.observeAuthInfo().firstOrNull()
+                    if (authInfo?.refreshToken.isNullOrBlank()){
+                        sessionStorage.setAuthInfo(null)
+                        return@refreshTokens null
+                    }
+                    var bearerTokens: BearerTokens? = null
+                    client.post<RefreshRequest, AuthInfoSerializable>(
+                        route = "/auth/refresh",
+                        body = RefreshRequest(
+                            refreshToken = authInfo.refreshToken
+                        ),
+                        builder = {
+                          markAsRefreshTokenRequest()
+                        }
+                    ).onSuccess { newAuthInfo ->
+                        sessionStorage.setAuthInfo(newAuthInfo.toDomain())
+                        bearerTokens = BearerTokens(
+                            accessToken = newAuthInfo.accessToken,
+                            refreshToken = newAuthInfo.refreshToken
+                        )
+                    }.onFailure { error ->
+                       sessionStorage.setAuthInfo(null)
+                    }
+                    bearerTokens
+                }
+            }
+        }
+```

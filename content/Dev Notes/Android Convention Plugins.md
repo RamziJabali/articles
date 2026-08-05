@@ -12,7 +12,6 @@ tags:
   - kotlin-compiler
   - kotlin-multiplatform
 ---
-
 # Android Convention Plugin
 
 ## Introduction
